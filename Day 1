@@ -1,1 +1,19 @@
+Intermediate JavaScript is the next level of proficiency in the JavaScript programming language, building upon the foundational knowledge gained in the basics of JavaScript.
+Objects and Object-Oriented Programming: In intermediate JavaScript, you'll explore objects and how they can be used to create structured data and encapsulate functionality. You'll also learn about object prototypes and how they are used to create inheritance in JavaScript.
+Asynchronous Programming: Asynchronous JavaScript is a fundamental concept for web development. You'll delve into asynchronous operations using callbacks, Promises, and the async/await syntax to manage non-blocking code execution, handle events, and perform tasks like fetching data from APIs.
+Error Handling: learn how to handle errors gracefully in your code using try...catch blocks and create custom error objects to make debugging and error reporting more robust.
 
+Frames and Windows Popups and Window methods
+The syntax to open a popup is: window.open(url, name, params):
+
+url
+An URL to load into the new window.
+
+name
+A name of the new window. Each window has a window.name, and here we can specify which window to use for the popup. If there’s already a window with such name – the given URL opens in it, otherwise a new window is opened.
+params
+The configuration string for the new window. It contains settings, delimited by a comma. There must be no spaces in params, for instance: width:200,height=100.
+Settings for params:
+Position:
+left/top (numeric) – coordinates of the window top-left corner on the screen. There is a limitation: a new window cannot be positioned offscreen.
+width/height (numeric) – width and height of a new window. There is a limit on minimal width/height, so it’s impossible to create an invisible window.
