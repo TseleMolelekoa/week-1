@@ -1,1 +1,25 @@
+# Iframes 
 
+In web development, iframes (short for inline frames) are HTML elements used to embed another HTML document within the current document. They allow you to display content from another website or an external source within your own webpage. JavaScript can be used to manipulate iframes and interact with their content. Here are some common actions you can perform with iframes using JavaScript:
+
+Accessing the iframe element:
+
+You can access an iframe element using JavaScript by its id or name attribute:
+Changing the source (URL) of an iframe
+You can dynamically change the content displayed in an iframe by setting its src attribute.
+
+Accessing the content of an iframe:
+
+To access the document inside an iframe, you can use the contentWindow or contentDocument properties.
+
+Sending data between the parent and the iframe:
+You can communicate between the parent window and the iframe using the postMessage method. This allows you to send and receive data securely between different documents:
+Parent window:
+iframe.contentWindow.postMessage('Hello from parent!', 'https://www.example.com');
+
+iframe window:
+window.addEventListener('message', (event) => {
+  if (event.origin === 'https://www.example.com') {
+    console.log('Message received from parent:', event.data);
+  }
+});
