@@ -23,3 +23,20 @@ window.addEventListener('message', (event) => {
     console.log('Message received from parent:', event.data);
   }
 });
+
+# Cross window messaging
+
+
+Cross-window messaging, also known as cross-document messaging or postMessage, is a technique in web development that allows communication between different windows or iframes (embedded documents) within a web page, even if they originate from different domains. This communication enables developers to build more interactive and collaborative web applications. 
+Purpose:
+Cross-window messaging is used to enable communication between different parts of a web page or between web pages and iframes for various purposes, such as sharing data, coordinating actions, or synchronizing behavior.
+Security Restrictions:
+Cross-window messaging is subject to security restrictions due to the same-origin policy, which typically prevents JavaScript in one window from accessing or manipulating content in another window or iframe that comes from a different domain.
+
+Window and Iframe Isolation:
+Each window or iframe is isolated in its own JavaScript environment. This isolation is maintained to prevent malicious code from one window from affecting others. Cross-window messaging provides a controlled and secure mechanism to exchange data and messages between these isolated environments.
+postMessage Method:
+The postMessage method is the primary mechanism for cross-window messaging. It is a method available on the window object and allows one window to send a message to another window or iframe. The method accepts two arguments: the message data and the target window's origin.
+Message Event Listener:
+To receive and process messages sent via postMessage, a window or iframe must set up an event listener for the message event. This event handler can then parse the incoming message and take appropriate actions based on its content.
+
